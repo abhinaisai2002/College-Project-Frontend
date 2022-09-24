@@ -14,10 +14,11 @@ input:focus {
 }
 
 input.error {
-  border: 1.5px solid red;
+  border: 1.5px solid red !important;
 }
+
 input.success {
-  border: 1.5px solid green;
+  border: 1.5px solid rgb(6, 82, 6)  !important;
 }
 
 .input__wrapper {
@@ -106,4 +107,8 @@ input.success {
 
 .radio_check_input {
   border: 1px solid #4442d0;
+}
+
+.error__message{
+  color: red !important;
 }

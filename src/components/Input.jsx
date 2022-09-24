@@ -8,6 +8,7 @@ export const Input = ({
   error,
   success,
   errorCond,
+  touched,
   ...other
 }) => {
   return (
@@ -19,8 +20,9 @@ export const Input = ({
         </Form.Label>
       )}
       <Form.Control
-        className={`${error !== "" && "error"} ${success && "success"}`}
+        className={`${touched? (errorCond?"error": "success"):''}`}
         {...other}
+        required
       />
       {errorCond && <span className="error__message">{error}</span>}
     </Form.Group>
